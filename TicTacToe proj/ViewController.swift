@@ -13,7 +13,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBOutlet var arrayButton: [UIButton]!
     @IBOutlet weak var gameOverLabel: UILabel!
     var counter = 0
     @IBAction func buttonClick(_ sender: UIButton) {
@@ -26,7 +25,7 @@ class ViewController: UIViewController {
         sender.isEnabled = false
         if counter == 9 {
             gameOverLabel.text = "Game Over"
-        }3
+        }
     }
     
 }
