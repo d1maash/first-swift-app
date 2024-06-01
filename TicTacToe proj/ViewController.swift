@@ -13,7 +13,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    @IBOutlet var arrayButton: [UIButton]!
+    @IBOutlet weak var gameOverLabel: UILabel!
+    var counter = 0
+    @IBAction func buttonClick(_ sender: UIButton) {
+        counter += 1
+        if counter % 2 == 0 {
+            sender.setTitle("❌", for: .normal)
+        } else {
+            sender.setTitle("🅾️", for: .normal)
+        }
+        sender.isEnabled = false
+        if counter == 9 {
+            gameOverLabel.text = "Game Over"
+        }3
+    }
+    
 }
 
